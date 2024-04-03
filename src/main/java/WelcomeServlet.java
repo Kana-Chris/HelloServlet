@@ -9,9 +9,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/**
- * Servlet implementation class WelcomeServlet
- */
 @WebServlet("/WelcomeServlet")
 public class WelcomeServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -21,8 +18,10 @@ public class WelcomeServlet extends HttpServlet {
     }
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	
 		request.setCharacterEncoding("UTF-8");
 		response.setContentType("text/html; charset=UTF-8");
+		
 		String username=request.getParameter("username");
 		System.out.println(username);
 		
